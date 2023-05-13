@@ -8,6 +8,7 @@ const blogSchema = mongoose.Schema(
     category: String,
     date: {
       type: Date,
+      default: Date.now(),
     },
     likes: Number,
     comments: [
