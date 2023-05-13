@@ -42,6 +42,7 @@ userRouter.post("/login", async (req, res) => {
           res.status(200).send({
             msg: "Sucessfully logged in",
             token: jwt.sign({ username: user.username }, "masai"),
+            userID: user._id,
           });
         } else {
           res.status(400).send({ msg: "Wrong Password" });
